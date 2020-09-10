@@ -41,7 +41,7 @@ public class OrderRepository {
         List<Predicate> criteria = new ArrayList<>();
         //주문 상태 검색
         if (orderSearch.getOrderStatus() != null) {
-            Predicate status = cb.equal(o.get("status"),
+            Predicate status = cb.equal(o.get("orderStatus"),
                     orderSearch.getOrderStatus());
             criteria.add(status);
         }
@@ -69,7 +69,7 @@ public class OrderRepository {
             } else {
                 jpql += " and";
             }
-            jpql += " o.status = :status";
+            jpql += " o.orderStatus = :status";
         }
         //회원 이름 검색
         if (StringUtils.hasText(orderSearch.getMemberName())) {

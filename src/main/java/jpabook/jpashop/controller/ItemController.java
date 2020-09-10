@@ -61,7 +61,7 @@ public class ItemController {
     }
 
     @PostMapping("/items/{itemId}/edit")
-    public String updateItem(@ModelAttribute("form") UpdateItemDto dto, @PathVariable Long itemId) {
+    public String updateItem(@ModelAttribute("form") UpdateItemDTO dto, @PathVariable Long itemId) {
         itemService.updateItem(itemId, dto);
         return "redirect:/items";
     }

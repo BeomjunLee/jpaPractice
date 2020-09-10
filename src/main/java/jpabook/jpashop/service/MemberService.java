@@ -1,4 +1,5 @@
 package jpabook.jpashop.service;
+import jpabook.jpashop.domain.Address;
 import jpabook.jpashop.domain.Member;
 import jpabook.jpashop.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
@@ -39,4 +40,10 @@ public class MemberService {
         return memberRepository.findOne(memberId);
     }
 
+    @Transactional
+    public void update(Long id, String name, String city, String street, String zipcode) {
+        Member member = memberRepository.findOne(id);
+        member.setName(name);
+        member.setAddress(new Address(city, street, zipcode));
+    }
 }

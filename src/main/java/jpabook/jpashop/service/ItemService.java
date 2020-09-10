@@ -1,11 +1,10 @@
 package jpabook.jpashop.service;
 
-import jpabook.jpashop.controller.UpdateItemDto;
+import jpabook.jpashop.controller.UpdateItemDTO;
 import jpabook.jpashop.domain.item.Book;
 import jpabook.jpashop.domain.item.Item;
 import jpabook.jpashop.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
-import org.hibernate.sql.Update;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,7 +26,7 @@ public class ItemService {
 
     //상품 수정
     @Transactional
-    public void updateItem(Long itemId, UpdateItemDto itemDto) {
+    public void updateItem(Long itemId, UpdateItemDTO itemDto) {
         Book findItem = (Book)itemRepository.findOne(itemId);
         findItem.setName(itemDto.getName());
         findItem.setPrice(itemDto.getPrice());
