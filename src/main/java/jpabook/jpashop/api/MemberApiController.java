@@ -14,11 +14,12 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/api")
 public class MemberApiController {
     private final MemberService memberService;
 
     //전체 회원조회
-    @GetMapping("/users")
+    @GetMapping("/members")
     public Result findMembers() {
         List<Member> findMembers = memberService.findMembers();
         //Entity -> DTO 변환
@@ -30,7 +31,7 @@ public class MemberApiController {
     }
 
     //특정 회원조회
-    @GetMapping("/users/{id}")
+    @GetMapping("/members/{id}")
     public Result findMember(@PathVariable("id") Long id){
         Member findMember = memberService.findOne(id);
 
@@ -52,7 +53,7 @@ public class MemberApiController {
 
 
     //회원가입
-    @PostMapping("/users")
+    @PostMapping("/members")
     public CreateMemberResponse saveMember(@RequestBody @Valid CreateMemberRequest request){
 
         Member member = new Member();
@@ -65,7 +66,7 @@ public class MemberApiController {
     }
 
     //회원수정
-    @PutMapping("/users/{id}")
+    @PutMapping("/members/{id}")
     public UpdateMemberResponse updateMember(
             @PathVariable("id") Long id,
             @RequestBody @Valid UpdateMemberRequest request) {
