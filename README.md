@@ -1,8 +1,7 @@
 ## JPA, SpringData JPA
 <br><br>
 
-## JPA
-<br>
+## [JPA]
 
 ### JPA에 대해서
 https://blog.naver.com/qjawnswkd/222069962160<br>
@@ -52,10 +51,11 @@ https://blog.naver.com/qjawnswkd/222074954087<br>
 ### @MappedSuperclass VS @Embeddable(임베디드 타입)
 https://blog.naver.com/qjawnswkd/222074957987
 
------
-
-## SpringData
 <br>
+-----
+<br>
+
+## [SpringData JPA]
 
 ### gradle, application.yml, Spring 설정
 https://blog.naver.com/qjawnswkd/222088433970<br>
