@@ -1,5 +1,5 @@
 ## JPA, SpringData JPA
-<img src="https://user-images.githubusercontent.com/69130921/111043358-78f87e00-8485-11eb-9c33-92df79b7654d.png">
+<img src="https://user-images.githubusercontent.com/69130921/111043397-a9401c80-8485-11eb-962c-822e699809eb.png">
 <br><br>
 
 ## [JPA]
