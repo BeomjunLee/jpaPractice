@@ -50,9 +50,37 @@ https://blog.naver.com/qjawnswkd/222074814530<br>
 https://blog.naver.com/qjawnswkd/222074954087<br>
 
 ### @MappedSuperclass VS @Embeddable(임베디드 타입)
-https://blog.naver.com/qjawnswkd/222074957987
+https://blog.naver.com/qjawnswkd/222074957987<br>
 
-<br>
+### 프로젝션(어떤걸 select할지)
+https://blog.naver.com/qjawnswkd/222076362480<br>
+
+### 페이징(setFirstResult, setMaxResults)
+https://blog.naver.com/qjawnswkd/222076393987<br>
+
+### 조인(inner, outer, theta, on)
+https://blog.naver.com/qjawnswkd/222077652911<br>
+
+### 서브쿼리(EXISTS, ALL, ANY, SOME, IN), 타입 표현, CASE식, 함수
+https://blog.naver.com/qjawnswkd/222077764211<br?
+
+### 경로 표현식, 명시적 조인, 묵시적 조인
+https://blog.naver.com/qjawnswkd/222078622897<br>
+
+### 페치 조인(엔티티, 컬렉션), 페치 조인과 일반 조인의 차이, 주의사항
+https://blog.naver.com/qjawnswkd/222078705093<br>
+
+### 다형성 쿼리, Named 쿼리, 벌크 연산
+https://blog.naver.com/qjawnswkd/222079569378<br>
+
+### 병합(Merge), 수정
+https://blog.naver.com/qjawnswkd/222086018631<br>
+
+### OSIV(Open Session In View) 최적화
+https://blog.naver.com/qjawnswkd/222087961383<br>
+
+### Entity, 값타입 Setter 금지에 대해
+https://blog.naver.com/qjawnswkd/222088532641<br>
 
 -----
 
