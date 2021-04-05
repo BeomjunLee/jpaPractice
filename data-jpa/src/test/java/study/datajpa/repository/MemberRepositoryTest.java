@@ -1,30 +1,31 @@
 package study.datajpa.repository;
 
-import javassist.runtime.Desc;
+import com.querydsl.jpa.impl.JPAQueryFactory;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Slice;
 import org.springframework.data.domain.Sort;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 import study.datajpa.dto.MemberDTO;
 import study.datajpa.entity.Member;
+import study.datajpa.entity.QMember;
+import study.datajpa.entity.QTeam;
 import study.datajpa.entity.Team;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
-
 import static org.junit.jupiter.api.Assertions.*;
+import static study.datajpa.entity.QMember.member;
+import static study.datajpa.entity.QTeam.team;
 
 @SpringBootTest
 @Transactional
-@Rollback(value = false)
 class MemberRepositoryTest {
 
 
@@ -241,6 +242,21 @@ class MemberRepositoryTest {
         System.out.println("findMember.updated = " + findMember.getLastModifiedDate());
         System.out.println("findMember.createdBy = " + findMember.getCreatedBy());
         System.out.println("findMember.updatedBy = " + findMember.getLastModifiedBy());
+    }
+
+    @Autowired
+    JPAQueryFactory queryFactory;
+
+    @Test
+    void fetchJoin() {
+        List<Member> fetch = queryFactory
+                .selectFrom(member)
+                .join(member.team, team).fetchJoin()
+                .fetch();
+        for (Member m : fetch) {
+            System.out.println("m = " + m);
+            System.out.println("m.getTeam() = " + m.getTeam());
+        }
     }
 
 }

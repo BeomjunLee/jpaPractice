@@ -62,9 +62,11 @@ public class MemberController {
 
     @PostConstruct
     public void init() {
-        for (int i = 0; i < 100; i++) {
-            Team saveTeam = teamRepository.save(new Team("team" + i));
-            memberRepository.save(new Member("user" + i, i, saveTeam));
+//        Team saveTeam1 = teamRepository.save(new Team("teamA"));
+        for (int i = 1; i <= 20; i++) {
+            Team saveTeam2 = teamRepository.save(new Team("team"+i));
+//            if(i % 2 == 0) memberRepository.save(new Member("user" + i, i, saveTeam2));
+            memberRepository.save(new Member("user" + i, i, saveTeam2));
         }
     }
 }
