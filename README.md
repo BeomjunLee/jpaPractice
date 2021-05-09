@@ -2,7 +2,10 @@
 <img src="https://user-images.githubusercontent.com/69130921/111043397-a9401c80-8485-11eb-962c-822e699809eb.png">
 <br><br>
 
-## [JPA]
+## 일대다 2개 이상 자식 엔티티 페치 조인 MultipleBagFetchException 발생시 (N + 1 문제)
+https://blog.naver.com/qjawnswkd/222344381188<br>
+
+## [JPA] 학습 내용 
 
 ### JPA에 대해서
 https://blog.naver.com/qjawnswkd/222069962160<br>
@@ -86,7 +89,7 @@ https://blog.naver.com/qjawnswkd/222088532641<br>
 
 <br>
 
-## [SpringData JPA]
+## [SpringData JPA] 
 
 ### gradle, application.yml, Spring 설정
 https://blog.naver.com/qjawnswkd/222088433970<br>
