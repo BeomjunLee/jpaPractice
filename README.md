@@ -89,7 +89,7 @@ https://blog.naver.com/qjawnswkd/222088532641<br>
 
 <br>
 
-## [SpringData JPA] 
+## [SpringData JPA] 학습 내용 정리
 
 ### gradle, application.yml, Spring 설정
 https://blog.naver.com/qjawnswkd/222088433970<br>
