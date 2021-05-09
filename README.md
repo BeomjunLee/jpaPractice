@@ -5,7 +5,7 @@
 ## 일대다 2개 이상 자식 엔티티 페치 조인 MultipleBagFetchException 발생시 (N + 1 문제)
 https://blog.naver.com/qjawnswkd/222344381188<br>
 
-## [JPA] 학습 내용 
+## [JPA] 학습 내용 정리
 
 ### JPA에 대해서
 https://blog.naver.com/qjawnswkd/222069962160<br>
